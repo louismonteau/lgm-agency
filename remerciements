@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LZ6V7345T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6LZ6V7345T');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K7NW3QGP');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci - LGM Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7NW3QGP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <h1>LGM Agency</h1>
+        <nav>
+            <a href="index.html#accueil">Accueil</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="thank-you-section">
+        <div class="thank-you-content">
+            <div class="thank-you-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+            </div>
+            
+            <h1 class="thank-you-title">Message Envoyé !</h1>
+            
+            <p class="thank-you-message">
+                Merci de nous avoir contactés ! Nous avons bien reçu votre message concernant le tracking web et data. 
+                Notre équipe d'experts vous répondra dans les plus brefs délais.
+            </p>
+
+            <div class="thank-you-actions">
+                <a href="index.html" class="btn-thank-you btn-primary">Retour à l'accueil</a>
+                <a href="index.html#contact" class="btn-thank-you btn-secondary">Nouveau message</a>
+            </div>
+
+            <div class="next-steps">
+                <h3>Prochaines étapes :</h3>
+                <ul>
+                    <li>Analyse de vos besoins en tracking et data</li>
+                    <li>Évaluation de votre configuration actuelle</li>
+                    <li>Proposition détaillée sous 24-48 heures</li>
+                    <li>Consultation gratuite offerte</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LGM Agency - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        // Animation au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tracking Google Analytics pour la page de remerciement
+            gtag('event', 'conversion', {
+                'send_to': 'G-6LZ6V7345T/conversion',
+                'event_callback': function() {
+                    console.log('Conversion tracked');
+                }
+            });
+
+            // Animation des éléments
+            const elements = document.querySelectorAll('.thank-you-content > *');
+            elements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    element.style.transition = 'all 0.6s ease';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+        });
+    </script>
+</body>
+</html>
