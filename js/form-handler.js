@@ -1,27 +1,19 @@
 // Gestion du formulaire de contact
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Validation basique
-            const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.style.borderColor = '#e74c3c';
-                } else {
-                    input.style.borderColor = '#2a9d8f';
-                }
-            });
-            
-            if (!isValid) {
-                e.preventDefault();
-                alert('Veuillez remplir tous les champs obligatoires.');
-                return;
-            }
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Tracking Google Analytics
+        gtag('event', 'contact_form_submit', {
+            'event_category': 'lead',
+            'event_label': 'Formulaire contact soumis'
+        });
+        
+        // Redirection immédiate vers la page de remerciement
+        window.location.href = 'thank-you.html';
+    });
+}
             
             // Tracking Google Analytics
             gtag('event', 'form_submit', {
