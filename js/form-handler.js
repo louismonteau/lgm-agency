@@ -5,7 +5,7 @@ if (contactForm) {
         e.preventDefault();
         
         // Tracking Google Analytics
-        gtag('event', 'contact_form_submit', {
+        gtag('event', 'audit_form_submit', {
             'event_category': 'lead',
             'event_label': 'Formulaire contact soumis'
         });
