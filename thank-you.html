@@ -200,3 +200,51 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Animation au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tracking de conversion
+            gtag('event', 'conversion', {
+                'send_to': 'G-6LZ6V7345T/conversion',
+                'event_callback': function() {
+                    console.log('Conversion enregistrée avec succès');
+                }
+            });
+
+            // Animation des éléments
+            const animatedElements = document.querySelectorAll(
+                '.success-animation, .thank-you-title, .thank-you-subtitle, .next-steps-card, .immediate-actions, .thank-you-actions, .contact-reminder'
+            );
+
+            animatedElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    element.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+
+            // Menu mobile (même code que index.html)
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                });
+                
+                const mobileLinks = mobileNav.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
