@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LZ6V7345T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6LZ6V7345T');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K7NW3QGP');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Formation Piano Analytics | LGM Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .cart-container {
+            max-width: 1000px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+        }
+
+        .cart-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .cart-item {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .item-image {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .price-section {
+            text-align: right;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .current-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .discount-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+
+        .summary-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .total-line {
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-bottom: none;
+            margin-top: 1rem;
+        }
+
+        .guarantee-badge {
+            background: var(--background-light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 1.5rem 0;
+            border: 1px solid #eee;
+        }
+
+        .secure-payment {
+            text-align: center;
+            margin: 1rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .cart-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .summary-card {
+                position: static;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+            
+            .price-section {
+                text-align: left;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7NW3QGP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <h1>LGM Agency</h1>
+            </div>
+            <nav class="desktop-nav">
+                <a href="index.html">Accueil</a>
+                <a href="formation-piano-analytics.html">Formation</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html">Accueil</a>
+            <a href="formation-piano-analytics.html">Formation</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="cart-container">
+        <h1>Votre Panier</h1>
+        <p>Finalisez votre commande pour accéder à la formation</p>
+        
+        <div class="cart-grid">
+            <div>
+                <div class="cart-item">
+                    <div class="item-header">
+                        <div style="display: flex; align-items: start;">
+                            <div class="item-image">🎓</div>
+                            <div class="item-details">
+                                <h3>Formation Complète Piano Analytics</h3>
+                                <p>Maîtrisez l'analyse de données et prenez des décisions éclairées</p>
+                                <ul class="features-list">
+                                    <li>18+ heures de formation vidéo</li>
+                                    <li>Supports PDF téléchargeables</li>
+                                    <li>Certificat de formation inclus</li>
+                                    <li>Accès à vie et mises à jour</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="remove-item" onclick="removeFromCart()">🗑️</button>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div class="original-price">€997</div>
+                        <div class="current-price">
+                            €497 <span class="discount-badge">-50%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guarantee-badge">
+                    <h4>✅ Garantie Satisfait ou Remboursé 30 Jours</h4>
+                    <p>Essayez la formation sans risque. Si elle ne vous convient pas, nous vous remboursons intégralement.</p>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <h3>Récapitulatif de Commande</h3>
+                
+                <div class="summary-line">
+                    <span>Sous-total :</span>
+                    <span>€497</span>
+                </div>
+                
+                <div class="summary-line">
+                    <span>Remise :</span>
+                    <span style="color: #e74c3c;">-€500</span>
+                </div>
+                
+                <div class="summary-line">
+                    <span>TVA :</span>
+                    <span>€99.40</span>
+                </div>
+                
+                <div class="summary-line total-line">
+                    <span>Total :</span>
+                    <span>€596.40</span>
+                </div>
+                
+                <a href="purchase-thank-you.html" class="btn btn-primary" style="width: 100%; padding: 1.2rem; margin: 1.5rem 0;" onclick="trackPurchase()">
+                    🛒 Procéder au Paiement
+                </a>
+                
+                <div class="secure-payment">
+                    🔒 Paiement 100% sécurisé
+                </div>
+                
+                <div class="payment-options">
+                    <p>Moyens de paiement acceptés :</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; font-size: 1.5rem;">
+                        <span>💳</span>
+                        <span>📱</span>
+                        <span>🏦</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">📊</div>
+                        <h3>LGM Agency</h3>
+                    </div>
+                    <p>Experts en Tracking Web & Data Marketing</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="index.html">Accueil</a>
+                        <a href="formation-piano-analytics.html">Formation</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Légal</h4>
+                        <a href="#">Conditions générales</a>
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">Mentions légales</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="mailto:contact@lgm-agency.com">contact@lgm-agency.com</a>
+                        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LGM Agency - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function trackPurchase() {
+            // Tracking de la conversion
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    'event': 'purchase',
+                    'transaction_id': 'PA_' + Date.now(),
+                    'value': 497,
+                    'currency': 'EUR',
+                    'items': [{
+                        'item_name': 'Formation Piano Analytics',
+                        'item_id': 'PA001',
+                        'price': 497,
+                        'quantity': 1
+                    }]
+                });
+            }
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'purchase', {
+                    'transaction_id': 'PA_' + Date.now(),
+                    'value': 497,
+                    'currency': 'EUR',
+                    'items': [{
+                        'item_name': 'Formation Piano Analytics',
+                        'item_id': 'PA001'
+                    }]
+                });
+            }
+        }
+
+        function removeFromCart() {
+            if (confirm('Êtes-vous sûr de vouloir retirer cette formation de votre panier ?')) {
+                window.location.href = 'formation-piano-analytics.html';
+            }
+        }
+
+        // Menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                });
+                
+                const mobileLinks = mobileNav.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
