@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LZ6V7345T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6LZ6V7345T');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K7NW3QGP');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre achat ! | LGM Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .purchase-success {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            animation: bounce 0.6s ease-out;
+        }
+
+        .next-steps {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin: 3rem auto;
+            max-width: 800px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            text-align: left;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .step-number {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+
+        .download-section {
+            background: white;
+            color: var(--text-dark);
+            padding: 4rem 0;
+        }
+
+        .download-card {
+            background: var(--background-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            border: 2px dashed var(--primary-color);
+        }
+
+        .btn-download {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .btn-download:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .order-details {
+            background: white;
+            color: var(--text-dark);
+            padding: 3rem 0;
+        }
+
+        .order-card {
+            background: var(--background-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .next-steps {
+                padding: 2rem 1rem;
+                margin: 2rem 1rem;
+            }
+            
+            .step-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7NW3QGP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <h1>LGM Agency</h1>
+            </div>
+            <nav class="desktop-nav">
+                <a href="index.html">Accueil</a>
+                <a href="formation-piano-analytics.html">Formation</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html">Accueil</a>
+            <a href="formation-piano-analytics.html">Formation</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="purchase-success">
+        <div class="container">
+            <div class="success-icon">🎉</div>
+            
+            <h1>Félicitations ! Votre formation est confirmée 🎓</h1>
+            <p class="hero-subtitle">Vous venez de faire le premier pas pour maîtriser Piano Analytics et transformer votre analyse de données</p>
+            
+            <div class="next-steps">
+                <h2>Prochaines Étapes</h2>
+                
+                <div class="step-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div class="step-number">1</div>
+                        <h3>Accédez à votre espace formation</h3>
+                    </div>
+                    <p>Vous allez recevoir un email avec vos identifiants de connexion dans les 5 minutes.</p>
+                    <a href="#" class="btn-download">
+                        📧 Vérifier mes emails
+                    </a>
+                </div>
+                
+                <div class="step-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div class="step-number">2</div>
+                        <h3>Rejoignez la communauté</h3>
+                    </div>
+                    <p>Accédez au groupe privé pour échanger avec les autres étudiants et poser vos questions.</p>
+                    <a href="#" class="btn-download">
+                        👥 Rejoindre le groupe
+                    </a>
+                </div>
+                
+                <div class="step-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div class="step-number">3</div>
+                        <h3>Commencez votre formation</h3>
+                    </div>
+                    <p>Suivez le parcours recommandé ou choisissez les modules qui vous intéressent le plus.</p>
+                    <a href="#" class="btn-download">
+                        🎬 Commencer le module 1
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">📚 <span class="highlight">Ressources Immédiates</span></h2>
+            
+            <div class="content-grid">
+                <div class="download-card">
+                    <h3>🎥 Modules Vidéo</h3>
+                    <p>Accédez immédiatement à tous les modules de formation</p>
+                    <a href="#" class="btn-download">
+                        📹 Accéder aux vidéos
+                    </a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>📖 Supports PDF</h3>
+                    <p>Téléchargez tous les supports de cours</p>
+                    <a href="#" class="btn-download">
+                        📄 Télécharger les PDF
+                    </a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>🛠️ Templates</h3>
+                    <p>Outils et modèles prêts à l'emploi</p>
+                    <a href="#" class="btn-download">
+                        📋 Télécharger les templates
+                    </a>
+                </div>
+                
+                <div class="download-card">
+                    <h3>👥 Communauté</h3>
+                    <p>Rejoignez le groupe d'entraide</p>
+                    <a href="#" class="btn-download">
+                        💬 Accéder au groupe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-details">
+        <div class="container">
+            <div class="order-card">
+                <h3 style="text-align: center; margin-bottom: 2rem;">📦 Détails de votre commande</h3>
+                
+                <div class="summary-line">
+                    <span>Référence :</span>
+                    <span><strong>PA_<span id="orderId"></span></strong></span>
+                </div>
+                
+                <div class="summary-line">
+                    <span>Formation :</span>
+                    <span>Formation Piano Analytics</span>
+                </div>
+                
+                <div class="summary-line">
+                    <span>Montant :</span>
+                    <span>€497</span>
+                </div>
+                
+                <div class="summary-line">
+                    <span>Date :</span>
+                    <span id="orderDate"></span>
+                </div>
+                
+                <div class="summary-line">
+                    <span>Status :</span>
+                    <span style="color: var(--primary-color);">✅ Confirmé</span>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" class="btn btn-secondary">
+                        📧 Recevoir la facture
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container" style="text-align: center;">
+            <h2>Besoin d'aide ?</h2>
+            <p class="section-intro">Notre équipe de support est là pour vous accompagner</p>
+            
+            <div class="hero-actions">
+                <a href="mailto:support@lgm-agency.com" class="btn btn-primary">
+                    📞 Contactez le support
+                </a>
+                <a href="formation-piano-analytics.html" class="btn btn-secondary">
+                    🎓 Retour à la formation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">📊</div>
+                        <h3>LGM Agency</h3>
+                    </div>
+                    <p>Experts en Tracking Web & Data Marketing</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="index.html">Accueil</a>
+                        <a href="formation-piano-analytics.html">Formation</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Légal</h4>
+                        <a href="#">Conditions générales</a>
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">Mentions légales</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="mailto:contact@lgm-agency.com">contact@lgm-agency.com</a>
+                        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LGM Agency - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Générer un ID de commande et la date
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderId = Math.random().toString(36).substr(2, 9).toUpperCase();
+            document.getElementById('orderId').textContent = orderId;
+            
+            const now = new Date();
+            document.getElementById('orderDate').textContent = now.toLocaleDateString('fr-FR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            // Tracking de la confirmation d'achat
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    'event': 'purchase_confirmation',
+                    'transaction_id': 'PA_' + orderId,
+                    'value': 497,
+                    'currency': 'EUR',
+                    'items': [{
+                        'item_name': 'Formation Piano Analytics',
+                        'item_id': 'PA001',
+                        'price': 497,
+                        'quantity': 1
+                    }]
+                });
+            }
+
+            // Menu mobile
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                });
+                
+                const mobileLinks = mobileNav.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
