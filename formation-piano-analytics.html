@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LZ6V7345T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6LZ6V7345T');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K7NW3QGP');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Piano Analytics - Maîtriser l'Analyse de Données | LGM Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles spécifiques à la page formation */
+        .sales-hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .badge {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .sales-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .guarantee-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        /* Section contenu */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .module-card {
+            background: var(--background-white);
+            border: 2px solid #f0f0f0;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .module-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .module-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .module-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+
+        .duration-badge {
+            background: var(--background-light);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Pricing Card */
+        .pricing-card {
+            background: white;
+            border: 3px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow-hover);
+            position: sticky;
+            top: 100px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin: 1rem 0;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .discount-badge {
+            background: #e74c3c;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .payment-options {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .testimonial-card {
+            background: var(--background-light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .student-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .pricing-card {
+                position: static;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sales-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .pricing-card {
+                padding: 2rem;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7NW3QGP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <h1>LGM Agency</h1>
+            </div>
+            <nav class="desktop-nav">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="formation-piano-analytics.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Formation</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html">Accueil</a>
+            <a href="index.html#expertise">Expertise</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="formation-piano-analytics.html" class="btn btn-primary">Formation</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="sales-hero">
+        <div class="container">
+            <div class="badge">FORMATION PREMIUM</div>
+            <h1>Maîtrisez <span class="highlight">Piano Analytics</span> et Devenez un Expert de l'Analyse de Données</h1>
+            <p class="hero-subtitle">Transformez des données complexes en insights actionnables et prenez des décisions éclairées qui boostent votre business</p>
+            
+            <div class="guarantee-badge">
+                <span>✅ Garantie satisfait ou remboursé 30 jours</span>
+            </div>
+            
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary btn-large">🚀 Commencer la formation</a>
+                <a href="#curriculum" class="btn btn-secondary">📚 Voir le programme</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Pourquoi <span class="highlight">Maîtriser Piano Analytics</span> Change Tout ?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Décisions Data-Driven</h3>
+                    <p>Prenez des décisions basées sur des données concrètes plutôt que sur des intuitions</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>ROI Multiplié</h3>
+                    <p>Identifiez les opportunités de croissance et optimisez vos investissements marketing</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Avantage Compétitif</h3>
+                    <p>Dépassez vos concurrents grâce à une analyse approfondie de votre écosystème digital</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="section-dark">
+        <div class="container">
+            <h2>Ce Que Vous <span class="highlight">Allez Maîtriser</span></h2>
+            <p class="section-intro">Un programme complet de 8 modules conçu par des experts</p>
+            
+            <div class="content-grid">
+                <div>
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">1</div>
+                            <h3>Fondamentaux de Piano Analytics</h3>
+                        </div>
+                        <p>Comprendre l'interface, la navigation et les concepts de base</p>
+                        <ul class="features-list">
+                            <li>Architecture de la plateforme</li>
+                            <li>Terminologie essentielle</li>
+                            <li>Configuration de base</li>
+                        </ul>
+                        <div class="duration-badge">📹 2h de vidéo</div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">2</div>
+                            <h3>Collecte et Qualité des Données</h3>
+                        </div>
+                        <p>Mettre en place un tracking fiable et qualitatif</p>
+                        <ul class="features-list">
+                            <li>Implémentation des tags</li>
+                            <li>Contrôle qualité des données</li>
+                            <li>Résolution des problèmes courants</li>
+                        </ul>
+                        <div class="duration-badge">📹 3h de vidéo</div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">3</div>
+                            <h3>Analyse Avancée des Parcours</h3>
+                        </div>
+                        <p>Comprendre le comportement des utilisateurs</p>
+                        <ul class="features-list">
+                            <li>Analysis des funnel de conversion</li>
+                            <li>Segmentation avancée</li>
+                            <li>Analyse du parcours client</li>
+                        </ul>
+                        <div class="duration-badge">📹 2.5h de vidéo</div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">4</div>
+                            <h3>Reporting Automatisé</h3>
+                        </div>
+                        <p>Créer des tableaux de bord percutants</p>
+                        <ul class="features-list">
+                            <li>Configuration des rapports</li>
+                            <li>Automatisation des exports</li>
+                            <li>Data visualization</li>
+                        </ul>
+                        <div class="duration-badge">📹 2h de vidéo</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">5</div>
+                            <h3>Analyse E-commerce</h3>
+                        </div>
+                        <p>Optimiser les performances de votre boutique en ligne</p>
+                        <ul class="features-list">
+                            <li>Tracking des transactions</li>
+                            <li>Analyse du panier moyen</li>
+                            <li>Optimisation du tunnel de vente</li>
+                        </ul>
+                        <div class="duration-badge">📹 2.5h de vidéo</div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">6</div>
+                            <h3>Analyse Cross-Device</h3>
+                        </div>
+                        <p>Comprendre le parcours multi-appareils</p>
+                        <ul class="features-list">
+                            <li>Attribution multi-canal</li>
+                            <li>Analyse cross-device</li>
+                            <li>Measurement protocol</li>
+                        </ul>
+                        <div class="duration-badge">📹 2h de vidéo</div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">7</div>
+                            <h3>API et Data Export</h3>
+                        </div>
+                        <p>Automatiser et exporter vos données</p>
+                        <ul class="features-list">
+                            <li>Utilisation de l'API Piano</li>
+                            <li>Export vers Data Studio</li>
+                            <li>Intégrations avancées</li>
+                        </ul>
+                        <div class="duration-badge">📹 1.5h de vidéo</div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-number">8</div>
+                            <h3>Cas Pratiques Réels</h3>
+                        </div>
+                        <p>Application sur des cas concrets d'entreprises</p>
+                        <ul class="features-list">
+                            <li>Etudes de cas complètes</li>
+                            <li>Résolution de problèmes réels</li>
+                            <li>Best practices métier</li>
+                        </ul>
+                        <div class="duration-badge">📹 3h de vidéo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <h2>Ce Que Vous <span class="highlight">Obtenez</span></h2>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <h3>🎥 18+ Heures de Formation Vidéo</h3>
+                            <p>Des tutoriels détaillés accessibles à vie</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h3>📚 Supports de Formation PDF</h3>
+                            <p>Tous les slides et résumés téléchargeables</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h3>🛠️ Templates et Outils</h3>
+                            <p>Modèles prêts à l'emploi pour vos analyses</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h3>👨‍💻 Accès Communauté</h3>
+                            <p>Groupe privé d'entraide entre étudiants</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h3>📞 Support Expert</h3>
+                            <p>Réponses à vos questions sous 24h</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <h3>📜 Certificat de Formation</h3>
+                            <p>Attestation de compétences valorisable</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="testimonial-card">
+                        <div class="student-info">
+                            <div class="student-avatar">MJ</div>
+                            <div>
+                                <h4>Marie J.</h4>
+                                <p>Responsable Marketing Digital</p>
+                            </div>
+                        </div>
+                        <p>"Cette formation a transformé ma façon d'analyser les données. Je prends maintenant des décisions basées sur des insights concrets plutôt que sur des intuitions."</p>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="student-info">
+                            <div class="student-avatar">TP</div>
+                            <div>
+                                <h4>Thomas P.</h4>
+                                <p>Analyste Data</p>
+                            </div>
+                        </div>
+                        <p>"Les cas pratiques sont extrêmement concrets. J'ai pu appliquer immédiatement les concepts dans mon travail quotidien."</p>
+                    </div>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="pricing-card">
+                    <h3>Formation Complète Piano Analytics</h3>
+                    <div class="price-section">
+                        <span class="price-original">€997</span>
+                        <span class="discount-badge">-50%</span>
+                        <div class="price">€497</div>
+                        <p>Paiement unique - Accès à vie</p>
+                    </div>
+                    
+                    <a href="cart.html" class="btn btn-primary cta-button" onclick="trackCTA('Acheter Formation Piano', 'primary', 'pricing_section')">
+                        🛒 Acheter Maintenant
+                    </a>
+                    
+                    <div class="guarantee-badge" style="background: var(--background-light); color: var(--text-dark);">
+                        <span>✅ Garantie 30 jours satisfait ou remboursé</span>
+                    </div>
+                    
+                    <div class="payment-options">
+                        <p>Paiements sécurisés acceptés :</p>
+                        <div class="payment-icons">
+                            <span>💳 Carte</span>
+                            <span>📱 PayPal</span>
+                            <span>🏦 Virement</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li>Accès immédiat et à vie</li>
+                        <li>18+ heures de formation vidéo</li>
+                        <li>Supports PDF téléchargeables</li>
+                        <li>Certificat de formation</li>
+                        <li>Support expert inclus</li>
+                        <li>Communauté privée</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-dark">
+        <div class="container">
+            <h2>Questions <span class="highlight">Fréquentes</span></h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Combien de temps dure l'accès à la formation ?</span>
+                </div>
+                <div class="faq-answer">
+                    <p>L'accès est à vie ! Vous pouvez suivre la formation à votre rythme et revenir sur les modules quand vous le souhaitez.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Faut-il des prérequis techniques ?</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Aucun prérequis technique n'est nécessaire. La formation part des bases et progresse vers les concepts avancés.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Comment se passe le support ?</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Vous avez accès à un groupe privé où vous pouvez poser vos questions. Notre équipe répond sous 24 heures maximum.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Puis-je me faire rembourser ?</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, nous offrons une garantie satisfait ou remboursé de 30 jours sans condition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2>Prêt à <span class="highlight">Transformer</span> Votre Analyse de Données ?</h2>
+            <p class="section-intro">Rejoignez +500 professionnels qui ont déjà transformé leur carrière avec cette formation</p>
+            
+            <div class="hero-actions">
+                <a href="cart.html" class="btn btn-primary btn-large" onclick="trackCTA('Acheter Formation Final CTA', 'primary', 'final_cta_section')">
+                    🚀 Commencer Maintenant - €497
+                </a>
+                <a href="#curriculum" class="btn btn-secondary">📚 Voir le Programme Détaillé</a>
+            </div>
+            
+            <div class="guarantee-badge" style="display: inline-flex; margin-top: 2rem;">
+                <span>✅ 30 jours pour essayer - Remboursement intégral si pas satisfait</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">📊</div>
+                        <h3>LGM Agency</h3>
+                    </div>
+                    <p>Experts en Tracking Web & Data Marketing</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="index.html">Accueil</a>
+                        <a href="index.html#expertise">Expertise</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="formation-piano-analytics.html">Formation</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Légal</h4>
+                        <a href="#">Conditions générales</a>
+                        <a href="#">Politique de confidentialité</a>
+                        <a href="#">Mentions légales</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="mailto:contact@lgm-agency.com">contact@lgm-agency.com</a>
+                        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LGM Agency - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tracking pour les CTA de la page formation
+        function trackCTA(ctaName, ctaType, ctaLocation) {
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    'event': 'cta_click',
+                    'cta_name': ctaName,
+                    'cta_type': ctaType,
+                    'cta_location': ctaLocation,
+                    'page_path': window.location.pathname,
+                    'product_name': 'Formation Piano Analytics',
+                    'product_price': '497'
+                });
+            }
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cta_click', {
+                    'cta_name': ctaName,
+                    'cta_type': ctaType,
+                    'cta_location': ctaLocation,
+                    'product_name': 'Formation Piano Analytics',
+                    'value': 497
+                });
+            }
+        }
+
+        // Menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                });
+                
+                const mobileLinks = mobileNav.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileNav.classList.remove('active');
+                    });
+                });
+            }
+
+            // FAQ toggle
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
