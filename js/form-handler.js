@@ -44,6 +44,117 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.addEventListener('click', function() {
             mobileNav.classList.toggle('active');
         });
+
+        // ===== TRACKING DATA LAYER =====
+    
+    // Fonction principale de tracking
+    function trackCTA(ctaName, ctaType, ctaLocation, additionalData = {}) {
+        const eventData = {
+            'event': 'cta_click',
+            'cta_name': ctaName,
+            'cta_type': ctaType,
+            'cta_location': ctaLocation,
+            'page_path': window.location.pathname,
+            'timestamp': new Date().toISOString(),
+            ...additionalData
+        };
+        
+        // Push vers DataLayer
+        window.dataLayer.push(eventData);
+        
+        // Tracking GA4
+        gtag('event', 'cta_click', {
+            'cta_name': ctaName,
+            'cta_type': ctaType,
+            'cta_location': ctaLocation,
+            ...additionalData
+        });
+        
+        console.log('CTA Tracked:', eventData); // Pour le debug
+    }
+    
+    // Tracking des boutons CTA principaux
+    function setupCTATracking() {
+        // Boutons hero section
+        const heroButtons = document.querySelectorAll('.hero-actions .btn');
+        heroButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                trackCTA(
+                    this.textContent.trim(), 
+                    this.classList.contains('btn-primary') ? 'primary' : 'secondary',
+                    'hero_section'
+                );
+            });
+        });
+        
+        // Boutons contact section
+        const contactButtons = document.querySelectorAll('#contact .btn');
+        contactButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                trackCTA(
+                    this.textContent.trim(),
+                    this.classList.contains('btn-primary') ? 'primary' : 'secondary', 
+                    'contact_section'
+                );
+            });
+        });
+        
+        // Boutons thank you page
+        const thankYouButtons = document.querySelectorAll('.thank-you-actions .btn');
+        thankYouButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                trackCTA(
+                    this.textContent.trim(),
+                    this.classList.contains('btn-primary') ? 'primary' : 'secondary',
+                    'thank_you_page'
+                );
+            });
+        });
+        
+        // Formulaire de contact
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                trackCTA(
+                    'Obtenir mon audit gratuit', 
+                    'form_submit', 
+                    'contact_section',
+                    { form_type: 'contact_lead' }
+                );
+            });
+        }
+        
+        // Navigation links
+        const navLinks = document.querySelectorAll('nav a, .footer-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                window.dataLayer.push({
+                    'event': 'navigation_click',
+                    'link_text': this.textContent.trim(),
+                    'link_url': this.getAttribute('href'),
+                    'link_location': this.closest('header') ? 'header_nav' : 
+                                    this.closest('footer') ? 'footer_links' : 'other'
+                });
+            });
+        });
+        
+        // Clicks sur les cartes de services
+        const serviceCards = document.querySelectorAll('.benefit-card, .expertise-card, .action-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A' || e.target.closest('a')) return;
+                
+                const title = this.querySelector('h3, h4')?.textContent?.trim() || 'Service Card';
+                const type = this.classList.contains('benefit-card') ? 'benefit' :
+                            this.classList.contains('expertise-card') ? 'expertise' : 'action';
+                
+                trackCTA(title, 'card_click', type + '_section');
+            });
+        });
+    }
+    
+    // Initialisation du tracking
+    setupCTATracking();
         
         // Fermer le menu en cliquant sur un lien
         const mobileLinks = mobileNav.querySelectorAll('a');
