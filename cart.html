@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LZ6V7345T"></script>
-<head>
-    <!-- NOUVEAU - Data Layer View Cart -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Formation Piano Analytics | LGM Agency</title>
+    
+    <!-- Data Layer Initialization -->
     <script>
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
@@ -12,12 +13,14 @@
             'page_type': 'cart',
             'page_title': 'Panier - LGM Agency',
             'currency': 'EUR',
-            'value': 497, // Adaptez selon le total réel
+            'value': 596.40, // Total avec TVA
             'ecommerce': {
                 'items': [{
                     'item_id': 'formation-piano-analytics',
-                    'item_name': 'Formation Piano Analytics',
+                    'item_name': 'Formation Complète Piano Analytics',
                     'item_category': 'formations',
+                    'item_category2': 'analytics',
+                    'item_brand': 'LGM Agency',
                     'price': 497,
                     'quantity': 1
                 }]
@@ -33,12 +36,10 @@
     })(window,document,'script','dataLayer','GTM-K7NW3QGP');</script>
     <!-- End Google Tag Manager -->
 
-        <!-- NOUVEAU - Helpers Data Layer -->
+    <!-- Data Layer Helpers -->
     <script src="js/datalayer-helpers.js"></script>
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panier - Formation Piano Analytics | LGM Agency</title>
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -269,20 +270,7 @@
                 
                 <a href="confirmation.html" 
                    class="cta-super"
-                   onclick="dataLayer.push({
-                     'event': 'begin_checkout',
-                     'currency': 'EUR', 
-                     'value': 497,
-                     'ecommerce': {
-                       'items': [{
-                         'item_id': 'formation-piano-analytics',
-                         'item_name': 'Formation Piano Analytics',
-                         'item_category': 'formations',
-                         'price': 497,
-                         'quantity': 1
-                       }]
-                     }
-                   })">
+                   onclick="trackBeginCheckout('Formation Complète Piano Analytics', 596.40, 'formation-piano-analytics')">
                   Passer la commande
                 </a>
                 
@@ -339,38 +327,26 @@
     </footer>
 
     <script>
-        function trackPurchase() {
-            // Tracking de la conversion
-            if (window.dataLayer) {
-                window.dataLayer.push({
-                    'event': 'purchase',
-                    'transaction_id': 'PA_' + Date.now(),
-                    'value': 497,
-                    'currency': 'EUR',
-                    'items': [{
-                        'item_name': 'Formation Piano Analytics',
-                        'item_id': 'PA001',
-                        'price': 497,
-                        'quantity': 1
-                    }]
-                });
-            }
-            
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'purchase', {
-                    'transaction_id': 'PA_' + Date.now(),
-                    'value': 497,
-                    'currency': 'EUR',
-                    'items': [{
-                        'item_name': 'Formation Piano Analytics',
-                        'item_id': 'PA001'
-                    }]
-                });
-            }
-        }
-
         function removeFromCart() {
             if (confirm('Êtes-vous sûr de vouloir retirer cette formation de votre panier ?')) {
+                // Track remove from cart event
+                if (window.dataLayer) {
+                    window.dataLayer.push({
+                        'event': 'remove_from_cart',
+                        'currency': 'EUR',
+                        'value': 497,
+                        'ecommerce': {
+                            'items': [{
+                                'item_id': 'formation-piano-analytics',
+                                'item_name': 'Formation Complète Piano Analytics',
+                                'item_category': 'formations',
+                                'price': 497,
+                                'quantity': 1
+                            }]
+                        }
+                    });
+                }
+                
                 window.location.href = 'formation-piano-analytics.html';
             }
         }
