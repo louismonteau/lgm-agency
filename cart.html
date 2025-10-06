@@ -3,11 +3,26 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LZ6V7345T"></script>
+<head>
+    <!-- NOUVEAU - Data Layer View Cart -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6LZ6V7345T');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'view_cart',
+            'page_type': 'cart',
+            'page_title': 'Panier - LGM Agency',
+            'currency': 'EUR',
+            'value': 497, // Adaptez selon le total réel
+            'ecommerce': {
+                'items': [{
+                    'item_id': 'formation-piano-analytics',
+                    'item_name': 'Formation Piano Analytics',
+                    'item_category': 'formations',
+                    'price': 497,
+                    'quantity': 1
+                }]
+            }
+        });
     </script>
     
     <!-- Google Tag Manager -->
@@ -249,7 +264,24 @@
                     <span>€596.40</span>
                 </div>
                 
-                <a href="purchase-thank-you.html" class="btn btn-primary" style="width: 100%; padding: 1.2rem; margin: 1.5rem 0;" onclick="trackPurchase()">Procéder au paiement</a>
+                <a href="confirmation.html" 
+                   class="cta-super"
+                   onclick="dataLayer.push({
+                     'event': 'begin_checkout',
+                     'currency': 'EUR', 
+                     'value': 497,
+                     'ecommerce': {
+                       'items': [{
+                         'item_id': 'formation-piano-analytics',
+                         'item_name': 'Formation Piano Analytics',
+                         'item_category': 'formations',
+                         'price': 497,
+                         'quantity': 1
+                       }]
+                     }
+                   })">
+                  Passer la commande
+                </a>
                 
                 <div class="secure-payment">
                     🔒 Paiement 100% sécurisé
