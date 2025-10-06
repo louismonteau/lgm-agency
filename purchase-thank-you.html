@@ -3,11 +3,28 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LZ6V7345T"></script>
+    <!-- NOUVEAU - Data Layer Purchase (TRÈS IMPORTANT) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-6LZ6V7345T');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'purchase',
+            'page_type': 'purchase_confirmation',
+            'page_title': 'Commande Confirmée - LGM Agency',
+            'transaction_id': 'CMD_' + new Date().getTime(), // ID unique
+            'value': 497,
+            'tax': 0,
+            'shipping': 0,
+            'currency': 'EUR',
+            'ecommerce': {
+                'items': [{
+                    'item_id': 'formation-piano-analytics',
+                    'item_name': 'Formation Piano Analytics',
+                    'item_category': 'formations',
+                    'price': 497,
+                    'quantity': 1
+                }]
+            }
+        });
     </script>
     
     <!-- Google Tag Manager -->
