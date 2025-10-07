@@ -385,15 +385,31 @@
                         <li>Mises à jour gratuites à vie</li>
                     </ul>
                 </div>
+               
                 
-                <a href="purchase-thank-you.html" 
-                   class="cta-super"
-                   onclick="trackBeginCheckout('Formation Complète Piano Analytics', 596.40, 'formation-piano-analytics')">
-                  Procéder au paiement
-                </a>
+                <a href="cart.html" 
+                       class="cta-premium" 
+                       onclick="dataLayer.push({
+                         'event': 'begin_checkout',
+                         'currency': 'EUR',
+                         'value': 497,
+                         'ecommerce': {
+                           'items': [{
+                             'item_id': 'formation-piano-analytics',
+                             'item_name': 'Formation Piano Analytics',
+                             'item_category': 'formations',
+                             'price': 497,
+                             'quantity': 1
+                           }]
+                         }
+                       }); return true;">
+                      Ajouter au panier
+                    </a>
 
+
+                
                 <style>
-                        .cta-super {
+                        .cta-premium {
                             display: inline-flex;
                             align-items: center;
                             justify-content: center;
